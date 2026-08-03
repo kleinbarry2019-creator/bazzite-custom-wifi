@@ -1,12 +1,10 @@
-
- 
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 
 name: bazzite-custom-wifi
 description: Bazzite Custom Image mit integriertem RTL8812AU WLAN-Treiber.
 
 base-image: ghcr.io/ublue-os/bazzite-nvidia
-image-version: 44
+image-version: stable
 
 modules:
   - type: files
