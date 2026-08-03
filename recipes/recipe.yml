@@ -20,3 +20,12 @@ modules:
         - gcc
         - make
         - git
+
+- type: script
+    scripts:
+      - |
+        git clone https://github.com/aircrack-ng/rtl8812au.git /tmp/rtl8812au
+        cd /tmp/rtl8812au
+        # Installiert den Treiber fest ins Image
+        make dkms_install
+        rm -rf /tmp/rtl8812au
