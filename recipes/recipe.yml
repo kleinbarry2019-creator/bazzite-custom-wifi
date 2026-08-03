@@ -42,4 +42,4 @@ modules:
           - org.gnome.Loupe
       - scope: user
 
-  - type: signing
+ 
