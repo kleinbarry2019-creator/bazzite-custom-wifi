@@ -7,15 +7,14 @@ image-version: latest
 
 modules:
   - type: dnf
+    repos:
+      copr:
+        - atim/starship
     install:
       packages:
         - micro
         - starship
         - dkms
-        - kernel-devel
-        - kernel-headers
-        - gcc
-        - make
         - git
 
   - type: script
