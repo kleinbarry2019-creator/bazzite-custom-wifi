@@ -1,15 +1,13 @@
 
+ 
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
-# image will be published to ghcr.io/<user>/<name>
+
 name: bazzite-custom-wifi
-# description will be included in the image's metadata
 description: Bazzite Custom Image mit integriertem RTL8812AU WLAN-Treiber.
 
-# Bazzite als Basis wählen (passe 'bazzite' bei Bedarf an deine Edition an, z.B. bazzite-deck oder bazzite-gnome)
 base-image: ghcr.io/ublue-os/bazzite-nvidia
-image-version: latest
+image-version: 44
 
-# module configuration, executed in order
 modules:
   - type: files
     files:
@@ -31,15 +29,3 @@ modules:
     remove:
       packages:
         - firefox
-        - firefox-langpacks
-
-  - type: default-flatpaks
-    configurations:
-      - notify: true
-        scope: system
-        install:
-          - org.mozilla.firefox
-          - org.gnome.Loupe
-      - scope: user
-
- 
