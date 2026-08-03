@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 ---
 name: bazzite-custom-wifi
-description: Custom Bazzite image with micro and starship
+description: Custom Bazzite image with WLAN support for FRITZ!WLAN AC 860
 base-image: ghcr.io/ublue-os/bazzite
 image-version: latest
 
@@ -14,3 +14,9 @@ modules:
       packages:
         - micro
         - starship
+        - dkms
+        - kernel-devel
+        - kernel-headers
+        - gcc
+        - make
+        - git
