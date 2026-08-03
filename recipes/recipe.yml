@@ -12,10 +12,6 @@ modules:
       - source: system
         destination: /
 
-  - type: akmods
-    install:
-      - 8812au
-
   - type: dnf
     repos:
       copr:
@@ -24,6 +20,8 @@ modules:
       packages:
         - micro
         - starship
+        - dkms
+        - rtl8812au-dkms
     remove:
       packages:
         - firefox
