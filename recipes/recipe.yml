@@ -21,11 +21,9 @@ modules:
         - gcc
         - make
 
-  - type: script
-    scripts:
-      - |
-        git clone https://github.com/morrownr/8812au-20210629.git /tmp/8812au
-        cd /tmp/8812au
-        # Installiert den Treiber direkt ohne interaktiven DKMS-Fehler
-        ./install-driver.sh noבים
-        rm -rf /tmp/8812au
+  - type: containerfile
+    snippets:
+      - RUN git clone https://github.com/morrownr/8812au-20210629.git /tmp/8812au && \
+            cd /tmp/8812au && \
+            ./install-driver.sh no && \
+            rm -rf /tmp/8812au
