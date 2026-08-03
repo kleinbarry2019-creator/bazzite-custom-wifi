@@ -7,7 +7,7 @@ description: Bazzite Custom Image mit integriertem RTL8812AU WLAN-Treiber.
 
 # Bazzite als Basis wählen (passe 'bazzite' bei Bedarf an deine Edition an, z.B. bazzite-deck oder bazzite-gnome)
 base-image: ghcr.io/bazzite-io/bazzite
-image-version: latest
+image-version: stable
 
 # module configuration, executed in order
 modules:
