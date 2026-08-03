@@ -21,6 +21,3 @@ modules:
         - micro
         - starship
         - kernel-firmware-mediatek
-    remove:
-      packages:
-        - firefox
